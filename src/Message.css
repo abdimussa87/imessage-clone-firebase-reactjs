@@ -1,0 +1,25 @@
+.message {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  position: relative;
+}
+.message__content {
+  margin: 10px;
+  padding: 10px;
+  background-color: #3e93fd;
+  border-radius: 15px;
+  color: white;
+}
+.message__reciever {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.message > p {
+  position: absolute;
+  margin-top: 20px;
+  bottom: 0;
+  color: gray;
+  font-size: small;
+}
