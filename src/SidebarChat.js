@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setChatInfo } from './features/chatSlice';
 import db from './firebase';
 import './SidebarChat.css'
+import Moment from 'react-moment'
 function SidebarChat({ id, chatName }) {
     const dispatch = useDispatch();
     const [messages, setMessages] = useState([]);
@@ -20,7 +21,13 @@ function SidebarChat({ id, chatName }) {
             <div className="sidebarChat__info">
                 <h4>{chatName}</h4>
                 <p>{messages[0]?.content}</p>
-                <small>{new Date(messages[0]?.timestamp?.toDate()).toLocaleString()} </small>
+                <small>
+                    {messages[0]?.timestamp != null ? <Moment interval={1000} fromNow>
+
+                        {new Date(messages[0]?.timestamp?.toDate())}
+                    </Moment> : '...'}
+
+                </small>
             </div>
         </div>
     )
