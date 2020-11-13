@@ -38,9 +38,8 @@
   /* width: 100%; */
 }
 
-.sidebar__headerAddChat > .MuiSvgIcon-root {
-  color: lightblue;
-  margin: 10px;
+.sidebar__headerAddChat {
+  color: #3e93fd;
 }
 
 .sidebar__chats {

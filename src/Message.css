@@ -3,23 +3,32 @@
   padding: 10px;
   align-items: center;
   position: relative;
+  width: fit-content;
 }
 .message__content {
   margin: 10px;
   padding: 10px;
-  background-color: #3e93fd;
+  background-color: #f5f5f5;
   border-radius: 15px;
-  color: white;
-}
-.message__reciever {
-  display: flex;
-  flex-direction: row-reverse;
+  color: black;
 }
 
-.message > p {
+.message__content > small {
   position: absolute;
   margin-top: 20px;
-  bottom: 0;
+  right: 0;
+  bottom: -5px;
   color: gray;
-  font-size: small;
+  font-size: 8px;
+}
+.message__sender {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.message__sender > .message__content {
+  background-color: #3e93fd;
+  color: white;
 }
